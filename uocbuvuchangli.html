@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qtheprofile.dev</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:#ffccff;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #ff0000;
+            color: #33ffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .notification {
+            display: none;
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 20px;
+            background: #FFFF;
+            border: 5px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 10000;
+        }
+        .notification button {
+            margin: 5 5px;
+            padding: 10px;
+            background: #ff0000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .notification button.cancel {
+            background: #6c757d;
+        }
+        .profile {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .profile img {
+            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+        }
+        .profile h1 {
+            margin: 10px 0;
+        }
+        .profile p {
+            margin: 5px 0;
+        }
+        .whereabouts {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .whereabouts p {
+            font-size: 16px;
+        }
+        .introduction {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .introduction p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .tabs button {
+            padding: 10px;
+            background: #ff0000;
+            color: #222222;
+            border: none;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        .tabs button.active {
+            background: ##ff0000;
+        }
+        .content {
+            display: none;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .content img {
+            max-width: 150px;
+            margin: 10px;
+        }
+        .links {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .links a {
+            margin: 0 10px;
+        }
+        .links img {
+            width: 40px;
+            height: 40px;
+        }
+        footer {
+            background: #ff0000;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pờ gồ phai</h1>
+    </header>
+
+    <div class="container">
+        <div class="notification" id="notification">
+           <p>Xin chào! cảm ơn vì bạn đã ghé qua .</p>
+            <button onclick="hideNotification()">hehe </button>
+            <button class="cancel" onclick="hideNotification()">Không có gì</button>
+        </div>
+
+        <div class="profile">
+            <img
+            src="https://cdn.discordapp.com/attachments/1272941944300900394/1279726134744973322/IMG_20240901_155413.jpg?ex=66d57d56&is=66d42bd6&hm=b5ff845cf1e4557ed74dfc3a99af1294868eb1f291863ebc69e74127b4f5258a&"
+            alt="Avatar">
+            <h1>Hello,I'm qtheabcxyz </h1>
+            <p><strong>🔴 </strong> Không muốn bị làm phiền </p>
+        </div>
+
+        <div class="whereabouts">
+            <p><strong>🗺️</strong> Lào Cai , Việt Nam  </p>
+        </div>
+
+        <div class="introduction">
+            <p><strong>Giới thiệu:</strong> Xin chào mọi người mình là thế
+            (14/3/200x), là một học sinh bình thường và mình đam mê về công nghệ
+            thông tin .Lúc rảnh mình thường tìm tòi những thứ mới mẻ để tạo ra
+            những dự án cho bản thân, và cả thú vui cho mình bằng sự sáng tạo
+            lỏ,Và hiện tại mình là một dev tự do. .</p>
+        </div>
+
+        <div class="tabs">
+            <button onclick="showContent('about')" class="active">About📝</button>
+            <button onclick="showContent('Interest')">Interest™️</button>
+            <button onclick="showContent('games')">Games🎮</button>
+            <button onclick="showContent('projects')">Projects💡</button>
+        </div>
+
+        <div id="about" class="content" style="display: block;">
+            <h2>•About.</h2>
+            <img
+            src="https://cdn.discordapp.com/attachments/1272941944300900394/1280055729465856083/image0.gif?ex=66d6b04c&is=66d55ecc&hm=46bec98f3e9590b5dca62df98428d3bfdc0582964416b66092137e6ffe6b5af2&"
+            alt="About">
+            <p>Mình học HyperText Markup Language,hay còn gọi là "Ngôn ngữ Đánh
+            dấu Siêu văn bản"để tạo hỗ trợ bằng một ít CSS/JS.Và trang này tạo
+            với mục đích gì?đây là lơi mình giới thiệu bản thân và những thứ
+          khác.Đây cũng là nơi mình tạo kết nối chia sẻ thông tin và ý kiến với
+          cộng đồng.Hy vọng bạn hiểu thêm về tôi hơn.
+          tương lai.</p>
+        </div>
+        <div id="Interest" class="content">
+            <h2>Interest</h2>
+            <img
+            src="https://cdn.discordapp.com/attachments/1272941944300900394/1280061906492592220/image0.gif?ex=66d6b60c&is=66d5648c&hm=1584e52b8733b9af6c079fc78fffaf91a7f462ecb9cbe32c21d54e430e26956f&"
+            alt="Skills">
+            <p>Ngay đây rồi,tôi thích đọc Light Novel và một ít MG/MH,một chút
+            gamer để xả stres,chỉ vậy thôi.(bí idea)</p>
+        </div>
+        <div id="games" class="content">
+            <h2>Games</h2>
+            <img
+            src="https://cdn.discordapp.com/attachments/1272941944300900394/1280066215599013888/2024090214253106.jpg?ex=66d6ba10&is=66d56890&hm=41b19441940e1d6c5632a71f1abe07323316c273ef0390e68aa350a764650594&"
+            alt="Games">
+            <p>Mình chơi Punishing: Gray Raven|Wuthering Waves|Genshin
+            Impact|Honkai: Star Rail|Minecraft.</p>
+        </div>
+        <div id="projects" class="content">
+            <h2>Projects</h2>
+            <img
+            src="https://cdn.discordapp.com/attachments/1272941944300900394/1280068169754738770/image0.gif?ex=66d6bbe2&is=66d56a62&hm=244171692ccb436da2d1d455e4d2d6bf7b2c7f76ff45951606cd07aa257346b3&"
+            alt="Projects">
+            <p>Tất cả ở trên Github của mình..</p>
+        </div>
+
+        <div class="links">
+            <a href="https://facebook.com" target="_blank"><img
+            src="https://cdn.discordapp.com/attachments/1272941944300900394/1279749584083746826/PicTrim_202491_171234.png?ex=66d5932d&is=66d441ad&hm=6177287cc69d601649c29d78aae9dc9935a9007a3d986084fe0524fcbb4b57ba&"
+            alt="Facebook" title="Tất cả về mình"></a>
+            <a href="https://discord.com/channels/@me" target="_blank"><img
+            src="https://cdn.discordapp.com/attachments/1272941944300900394/1279749575141490719/PicTrim_202491_17179.png?ex=66d5932b&is=66d441ab&hm=66cc1139e758971704301a9e0e1ce6a252ea30bfbcda6e8f5cdb5ab535d025d2&"
+            alt="Discord" title="Tất cả về mình"></a>
+            <a href="https://github.com" target="_blank"><img
+            src="https://cdn.discordapp.com/attachments/1272941944300900394/1279748917654720613/PicTrim_202491_171856.png?ex=66d5928e&is=66d4410e&hm=fe9c45bf23fcb84315c32fbf5fc073223a2411ede9cc2e30a89f15c30a48f499&
+            "alt="GitHub" title="Tất cả về mình"></a>
+            <a
+            href="https://mail.google.com/mail/mu/mp/101/#tl/priority/%5Esmartlabel_personal"
+            target="_blank"><img
+            src="https://cdn.discordapp.com/attachments/1272941944300900394/1280073203213139979/PicTrim_202492_145331.png?ex=66d6c092&is=66d56f12&hm=1b2ef13c6109e87b721011f96213c9884bb836ec39a61cef18fb0dc62666ea73&"
+            alt="Gmail" title="Tất cả về mình"></a>
+        </div>
+    </div>
+
+    <footer>
+        <p>2024 © Made by qthe with HTML|JS| CSS.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('notification').style.display = 'block';
+        });
+
+        function hideNotification() {
+            document.getElementById('notification').style.display = 'none';
+        }
+
+        function showContent(id) {
+            var contents = document.querySelectorAll('.content');
+            var buttons = document.querySelectorAll('.tabs button');
+
+            contents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+            buttons.forEach(function(button) {
+                button.classList.remove('active');
+            });
+
+            document.getElementById(id).style.display = 'block';
+            document.querySelector(`[onclick="showContent('${id}')"]`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
