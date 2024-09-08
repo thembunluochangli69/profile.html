@@ -6,6 +6,35 @@
     <title>qtheprofile.dev</title>
     <style>
         body {
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0; 
+            top: 0; 
+            width: 100%; 
+            height: 80%; 
+            overflow: auto; 
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.4); 
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color:#ffff;
+            margin: 5% auto;
+            padding: 30px;
+            border: 10px solid red;
+            width: 50%;
+            height: 10%;
+        }
+
+        .close {
+            color: #ffd;
+            float: right;
+            font-size: 30px;
+            font-weight: bold;
+        }
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -122,22 +151,62 @@
 </head>
 <body>
     <header>
-        <h1>Pờ gồ phai</h1>
+        <h1>Profile</h1>
     </header>
 
-    <div class="container">
-        <div class="notification" id="notification">
-           <p>Xin chào! cảm ơn vì bạn đã quan tâm và  ghé qua .</p>
-            <button onclick="hideNotification()">hehe </button>
-            <button class="cancel" onclick="hideNotification()">Không có gì</button>
+    </style>
+        <div id="musicModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>  You gayy?(open music=no||and vice versa)</p>
+            <button id="yesBtn">No</button>
+            <button id="noBtn">yes</button>
         </div>
+    </div>
+
+    <audio id="backgroundMusic"
+    src="https://files.catbox.moe/sjdi8y.mp3"
+    src="https://files.catbox.moe/pdrmg1.mp3"
+    src="https://files.catbox.moe/j3ndrf.mp3"
+    preload="auto"></audio>
+
+    <script>
+         
+        var modal = document.getElementById("musicModal");
+        var btn = document.getElementById("yesBtn");
+        var span = document.getElementsByClassName("close")[0];
+        var audio = document.getElementById("backgroundMusic");
+
+        window.onload = function() {
+            modal.style.display = "block";
+        };
+
+        btn.onclick = function() {
+            audio.play();
+            modal.style.display = "none";
+        };
+
+        document.getElementById("noBtn").onclick = function() {
+            modal.style.display = "none";
+        };
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        };
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
 
         <div class="profile">
             <img
             src="https://i.imgur.com/KoIJRZs.png"
             alt="Avatar">
-            <h1> Hello,I'm qtheabcxyz </h1>
-            <p><strong>🔴 Không muốn bị làm phiền</strong> </p>
+            <h1> Hello,I'm Lazy_abcxyz </h1>
+            <p><strong>🔴 offline </strong> </p>
         </div>
 
         <div class="whereabouts">
@@ -199,11 +268,9 @@
             src="https://i.imgur.com/fm2FAwQ.png"
             alt="Discord" title="Tất cả về mình"></a>
             <a href="https://github.com" target="_blank"><img
-            src="https://cdn.discordapp.com/attachments/1279353500257746976/1280433424963862528/PicTrim_202491_171856.png?ex=66d8100d&is=66d6be8d&hm=38e7f98c74e26a64bc809184975eaa8ae9c2884f3c1ae4db029b5514e0f63995&"
-            "alt="GitHub" title="Tất cả về mình"></a>
-            <a
-            href="https://mail.google.com/mail/mu/mp/101/#tl/priority/%5Esmartlabel_personal"
-            target="_blank"><img
+            src="https://i.imgur.com/kHyi1px.png"
+            "alt="GitHub" title="Github"> </a>"
+            <a href="https://mail.google.com/mail/mu/mp/101/#tl/priority/%5Esmartlabel_personal" target="_blank"><img
             src="https://i.imgur.com/yOpn5U3.png"=66d6c092&is=66d56f12&hm=1b2ef13c6109e87b721011f96213c9884bb836ec39a61cef18fb0dc62666ea73&"
             alt="Gmail" title="Tất cả về mình"></a>
         </div>
@@ -238,5 +305,5 @@
         }
     </script>
 </body>
-                </html>
+    </html>
         
