@@ -5,9 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>quangthe.dev</title>
     <style>
-    @import
-    url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
         body {
+            font-family: 'Poetsen One', Arial, sans-serif; /* Sử dụng font mới */
+            margin: 0;
+            padding: 0;
+            background-image:
+            url('https://i.imgur.com/a4aiFmK.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        
         .modal {
             display: none; 
             position: fixed; 
@@ -23,7 +35,7 @@
         }
 
         .modal-content {
-            background-color:#ffff;
+            background-color: #ffff;
             margin: 5% auto;
             padding: 30px;
             border: 10px solid red;
@@ -37,22 +49,20 @@
             font-size: 30px;
             font-weight: bold;
         }
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color:#ffccff;
-        }
+        
         .container {
             width: 90%;
             margin: auto;
             overflow: hidden;
         }
+        
         header {
             background: #ff0000;
             color: #33fff;
             padding: 10px 0;
             text-align: center;
         }
+
         .notification {
             display: none;
             position: fixed;
@@ -65,6 +75,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             z-index: 10000;
         }
+
         .notification button {
             margin: 5 5px;
             padding: 10px;
@@ -73,44 +84,55 @@
             border: none;
             cursor: pointer;
         }
+
         .notification button.cancel {
             background: #6c757d;
         }
+
         .profile {
             text-align: center;
             margin: 20px 0;
         }
+
         .profile img {
             border-radius: 50%;
             width: 180px;
             height: 180px;
         }
+
         .profile h1 {
             margin: 10px 0;
         }
+
         .profile p {
             margin: 5px 0;
         }
+
         .whereabouts {
             text-align: center;
             margin: 20px 0;
         }
+
         .whereabouts p {
             font-size: 16px;
         }
+
         .introduction {
             text-align: center;
             margin: 20px 0;
         }
+
         .introduction p {
             font-size: 16px;
             line-height: 1.5;
         }
+
         .tabs {
             display: flex;
             justify-content: center;
             margin: 20px 0;
         }
+
         .tabs button {
             padding: 10px;
             background: #ff0000;
@@ -119,30 +141,37 @@
             cursor: pointer;
             margin: 0 5px;
         }
+
         .tabs button.active {
-            background: ##ff0000;
+            background: #ff0000;
         }
+
         .content {
             display: none;
             margin: 20px 0;
             text-align: center;
         }
+
         .content img {
             max-width: 150px;
             margin: 10px;
         }
+
         .links {
             display: flex;
             justify-content: center;
             margin: 20px 0;
         }
+
         .links a {
             margin: 0 10px;
         }
+
         .links img {
             width: 40px;
             height: 40px;
         }
+
         footer {
             background: #ff0000;
             color: #fff;
@@ -156,8 +185,7 @@
         <h1>qtheProfile69.dev</h1>
     </header>
 
-    </style>
-        <div id="musicModal" class="modal">
+    <div id="musicModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <p>On Music?</p>
@@ -166,14 +194,9 @@
         </div>
     </div>
 
-    <audio id="backgroundMusic"
-    src="https://files.catbox.moe/sjdi8y.mp3"
-    src="https://files.catbox.moe/pdrmg1.mp3"
-    src="https://files.catbox.moe/j3ndrf.mp3"
-    preload="auto"> </audio>
+    <audio id="backgroundMusic" src="https://files.catbox.moe/sjdi8y.mp3" preload="auto"></audio>
 
     <script>
-         
         var modal = document.getElementById("musicModal");
         var btn = document.getElementById("yesBtn");
         var span = document.getElementsByClassName("close")[0];
@@ -203,98 +226,81 @@
         };
     </script>
 
-        <div class="profile">
-            <img
-            src="https://i.imgur.com/KoIJRZs.png"
-            alt="Avatar">
-            <h1> Hello, I'm qthe </h1>
-            <p><strong>🔴 Offline </strong> </p>
-        </div>
+    <div class="profile">
+        <img src="https://i.imgur.com/KoIJRZs.png" alt="Avatar">
+        <h1> Hello, I'm qthe </h1>
+        <p><strong>🔴 Offline </strong></p>
+    </div>
 
-        <div class="whereabouts">
-            <p><strong>🗺️ Lào Cai ,Việt Nam </strong> </p>
-        </div>
+    <div class="whereabouts">
+        <p><strong>🗺️ Lào Cai, Việt Nam </strong></p>
+    </div>
 
-        <div class="introduction">
-            <p><strong>Introduce:</strong> Xin chào mọi người mình là Thế
+    <div class="introduction">
+        <p><strong>Introduce:</strong> Xin chào mọi người mình là Thế
             (14/3/200x), là một học sinh bình thường .Và hiện tại mình là một
-            dev tự do mảng chính là interface design with style and function.Hiện tại đang bí idea và các dự án hiện tại và tương lai
-            .  </p>
-        </div>
+            dev tự do mảng chính là interface design with style and function. Hiện tại đang bí idea và các dự án hiện tại và tương lai.
+        </p>
+    </div>
 
-        <div class="tabs">
-            <button onclick="showContent('about')" class="active">•About📝</button>
-            <button onclick="showContent('Interest')">•Interest™️</button>
-            <button onclick="showContent('games')">•Games🎮</button>
-            <button onclick="showContent('projects')">•Projects💡</button>
-        </div>
+    <div class="tabs">
+        <button onclick="showContent('about')" class="active">•About📝</button>
+        <button onclick="showContent('Interest')">•Interest™️</button>
+        <button onclick="showContent('games')">•Games🎮</button>
+        <button onclick="showContent('projects')">•Projects💡</button>
+    </div>
 
-        <div id="about" class="content" style="display: block;">
-            <h2>• Hơn nữa .</h2>
-            <img
-            src="https://i.imgur.com/3iYCS1C.gif"
-            alt="About">
-            <p>Và trang này tạo
-            với mục đích gì?đây là lơi mình giới thiệu bản thân và những thứ
-          khác.Đây cũng là nơi mình tạo kết nối chia sẻ thông tin và ý kiến với
-          cộng đồng.Hy vọng tương lai bạn hiểu thêm về tôi hơn.Dưới có các đường
-          dẫn tới các liên kết khác của tôi click vô hình sẽ dẫn tới. [Nếu có ảnh dead
-          hay lỗi gì xin hãy ib dms với tôi]</p>
-        </div>
-        <div id="Interest" class="content">
-            <h2>Thích gì </h2>
-            <img
-            src="https://i.imgur.com/fTF3Bhk.gif"
-            alt="Skills">
-            <p>Ngay đây rồi và ,tôi thích đọc Light Novel ,chút games ,xem
-            YT để giết time và xả stress
-            <h3>Job></h3> Viết sách điện tử và bán always link với YT .Code web
-            fix giao diện chức năng."culi" </p>
-        </div>
-        <div id="games" class="content">
-            <h2>Games</h2>
-            <img
-            src="https://i.imgur.com/5IzY1Yg.gif"
-            alt="Games">
-            <p>Plays |Wuthering Waves|HSR|Osu </p>
-        </div>
-        <div id="projects" class="content">
-            <h2>Projects</h2>
-            <img
-            src="https://i.imgur.com/r8S6aWr.gif"
-            alt="Projects">
-            <p>Về các dựa án của mình thì,tất cả ở trên Github của mình...
-            abcxyz...abcxyz...abcxyz...abcxyz.Làm Toll, bot discord/creat
-            profile,train AI ,web scam ,reg red finger,setup hypertex ,setup bot
-            chat GPT tele ,buff like ,sell Cow OwO,sell file game H-to
-            Joiplay,ib .</p>
-        </div>
-        <div class="links"
-            <a href=YTB target="_blank"><img
-            src="https://i.imgur.com/cYO7MrH.png"
-            alt="YTB" title="Youtube"></a>
-            <a href="https://discord.com/channels/@me" target="_blank"><img
-            src="https://i.imgur.com/fm2FAwQ.png"
-            alt="Discord" title="Discord "></a>
-            <a href="https://github.com" target="_blank"><img
-            src="https://i.imgur.com/kHyi1px.png
-            "alt="GitHub" title="Github"> </a>
-            <a href="https://mail.google.com/mail/mu/mp/101/#tl/priority/%5Esmartlabel_personal" target="_blank"><img
-            src="https://i.imgur.com/yOpn5U3.png"=66d6c092&is=66d56f12&hm=1b2ef13c6109e87b721011f96213c9884bb836ec39a61cef18fb0dc62666ea73&
-            alt="Gmail" title="Gmail"></a>
+    <div id="about" class="content" style="display: block;">
+        <h2>• Hơn nữa.</h2>
+        <img src="https://i.imgur.com/3iYCS1C.gif" alt="About">
+        <p>Và trang này tạo với mục đích gì? đây là lơi mình giới thiệu bản thân và những thứ khác. Đây cũng là nơi mình tạo kết nối chia sẻ thông tin và ý kiến với cộng đồng. Hy vọng tương lai bạn hiểu thêm về tôi hơn. Dưới có các đường dẫn tới các liên kết khác của tôi click vô hình sẽ dẫn tới. [Nếu có ảnh dead hay lỗi gì xin hãy ib dms với tôi]</p>
+    </div>
 
-        </div>
+    <div id="Interest" class="content">
+        <h2>Thích gì </h2>
+        <img src="https://i.imgur.com/fTF3Bhk.gif" alt="Skills">
+        <p>Ngay đây rồi và, tôi thích đọc Light Novel, chút games, xem YT để giết time và xả stress.</p>
+        <h3>Job:</h3> Viết sách điện tử và bán, luôn có link với YT. Code web, fix giao diện chức năng. "culi".
+    </div>
+
+    <div id="games" class="content">
+        <h2>Games</h2>
+        <img src="https://i.imgur.com/2mDV75f.jpeg" alt="Games">
+        <p>Plays | Wuthering Waves | HSR | Osu</p>
+    </div>
+
+    <div id="projects" class="content">
+        <h2>Projects</h2>
+        <img src="https://i.imgur.com/r8S6aWr.gif" alt="Projects">
+        <p>Về các dự án của mình thì, tất cả ở trên Github của mình...
+            abcxyz...abcxyz...abcxyz...abcxy.code bot discord/creat
+            profile, train AI, setup hypertex, setup bot
+            chat GPT tele, sell Cow OwO, sell file game H-to
+            Joiplay, ib.
+        </p>
+    </div>
+       <div class="links">
+        <a href="https://www.facebook.com/profile.php?id=100040017744125&mibextid=ZbWKwL" target="_blank">
+            <img src="https://i.imgur.com/aU36lUw.png" alt="Fb" title="Fb">
+        </a>
+        <a href="https://discord.com/channels/@me" target="_blank">
+            <img src="https://i.imgur.com/fm2FAwQ.png" alt="Discord" title="Discord">
+        </a>
+        <a href="https://github.com" target="_blank">
+            <img src="https://i.imgur.com/kHyi1px.png" alt="GitHub" title="Github">
+        </a>
+        <a href="https://mail.google.com/mail/mu/mp/101/#tl/priority/%5Esmartlabel_personal" target="_blank">
+            <img src="https://i.imgur.com/yOpn5U3.png" alt="Gmail" title="Gmail">
+        </a>
     </div>
 
     <footer>
-        <p>Copyright © 2019  Made by quangthe with Lazyelycon.<br>Bản quyền bởi
-        tôi!</p>
+        <p>Copyright © 2019 Made by quangthe with Lazyelycon.<br> web Bản quyền bởi tôi!</p>
     </footer>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            document.getElementByI
-            ('notification').style.display = 'block';
+            document.getElementById('notification').style.display = 'block';
         });
 
         function hideNotification() {
@@ -317,5 +323,4 @@
         }
     </script>
 </body>
-                </html>
-                
+            </html>
