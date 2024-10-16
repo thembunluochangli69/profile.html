@@ -300,12 +300,12 @@
 
     <script>
         // Lấy số lượt truy cập từ localStorage
-        let visitCount = localStorage.getItem('visitCount') || 0;
+        let visitCount = localStorage.getItem('visitCount') || 137;
         visitCount++;
         localStorage.setItem('visitCount', visitCount);
         
         // Hiển thị số lượt truy cập
-        document.getElementById('visitCount').innerText = `lượt truy cập gei: ${visitCount}`;
+        document.getElementById('visitCount').innerText = 'Error 404: ${visitCount}`;
 
         document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('notification').style.display = 'block';
