@@ -8,18 +8,16 @@
         @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
 
         body {
-            font-family: 'Poetsen One', Arial, sans-serif; /* Sử dụng font mới */
+            font-family: 'Poetsen One', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image:
-            url("https://i.imgur.com/QA7JLyi.gif");
+            background-image: url("https://i.imgur.com/QA7JLyi.gif");
             background-size: 450px 400px;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
         }
-        
-        
+
         .modal {
             display: none; 
             position: fixed; 
@@ -182,7 +180,7 @@
 </head>
 <body>
     <header>
-        <h1>Profile seg69</h1>
+        <h1>Discontinued</h1>
     </header>
 
     <div id="musicModal" class="modal">
@@ -278,8 +276,9 @@
             chat GPT tele, sell Cow OwO, sell file game H-to
             Joiplay, ib.
         </p>
-    </div>
-       <div class="links">
+        </div>
+
+    <div class="links">
         <a href="https://www.facebook.com/profile.php?id=100040017744125&mibextid=ZbWKwL" target="_blank">
             <img src="https://i.imgur.com/nV9APaA.png" alt="Fb" title="Fb">
         </a>
@@ -295,10 +294,19 @@
     </div>
 
     <footer>
-        <p>Copyright © 2019 Made by quangthe with Lazyelycon.<br> web Bản quyền bởi tôi!</p>
+        <p>Copyright © 2019 Made by quangthe with Lazyelycon.<br> web Bản quyền bởi tôi! [đã ngừng hoạt động]</p>
+        <p id="visitCount">Số lượt truy cập: 0</p>
     </footer>
 
     <script>
+        // Lấy số lượt truy cập từ localStorage
+        let visitCount = localStorage.getItem('visitCount') || 0;
+        visitCount++;
+        localStorage.setItem('visitCount', visitCount);
+        
+        // Hiển thị số lượt truy cập
+        document.getElementById('visitCount').innerText = `lượt truy cập gei: ${visitCount}`;
+
         document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('notification').style.display = 'block';
         });
